@@ -1,0 +1,454 @@
+/* Testimonials Section Styles */
+.testimonials-section {
+    padding: 10px 0;
+    background-color: #f8fafc;
+  }
+  
+  .testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .testimonials-subtitle {
+    color: #64748b;
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .testimonials-carousel {
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  .testimonials-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    min-height: 320px;
+  }
+  
+  .testimonial-card {
+    border-radius: 12px;
+    padding: 32px;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Center Card Styles */
+  .center-card {
+    background-color: #1F4F74; /* Background color for the center card */
+    color: white; /* Text color for the center card */
+    transform: scale(1.1); /* Make the center card bigger */
+    z-index: 2; /* Bring the center card to the front */
+  }
+  
+  /* Side Card Styles */
+  .side-card {
+    background-color: #334155; /* Background color for side cards */
+    color: white; /* Text color for side cards */
+    transform: scale(0.9); /* Make side cards smaller */
+    opacity: 0.8; /* Slightly transparent */
+  }
+  
+  .testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+  }
+  
+  .testimonial-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testimonial-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .testimonial-role {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .testimonials-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding-bottom: 60px;
+  }
+  
+  .nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #1F4F74;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .nav-button:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .nav-button span {
+    margin: 0 8px;
+  }
+  
+  /* Animation classes */
+  .exit-left {
+    animation: exitLeft 0.5s forwards;
+  }
+  
+  .enter-right {
+    animation: enterRight 0.5s forwards;
+  }
+  
+  .exit-right {
+    animation: exitRight 0.5s forwards;
+  }
+  
+  .enter-left {
+    animation: enterLeft 0.5s forwards;
+  }
+  
+  @keyframes exitLeft {
+    from {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%) rotate(-10deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes enterRight {
+    from {
+      transform: translateX(100%) rotate(10deg);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes exitRight {
+    from {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100%) rotate(10deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes enterLeft {
+    from {
+      transform: translateX(-100%) rotate(-10deg);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .testimonials-cards-container {
+      flex-direction: column;
+      align-items: center;
+      min-height: auto;
+      gap: 32px;
+    }
+  
+    .testimonial-card {
+      width: 100%;
+      max-width: 500px;
+    }
+  
+    .center-card, .side-card {
+      transform: none; /* Disable scaling on mobile */
+      opacity: 1; /* Full opacity on mobile */
+    }
+  }
+
+  /* Waiting List Section Container */
+.waiting-list-section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background-color: #FF9B5B;
+  }
+  
+  /* Main Content Container */
+  .waiting-list-section .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+  }
+  
+  /* Heading Styles */
+  .waiting-list-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  
+  /* Description Text */
+  .waiting-list-section p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  
+  /* Sign Up Button */
+  .waiting-list-section .signup-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    color: #FF9B5B;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+  }
+  
+  .waiting-list-section .signup-button:hover {
+    background-color: #fff5f0;
+    transform: translateY(-2px);
+  }
+  
+  /* Floating Profile Images Container */
+  .profile-images-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  
+  /* Individual Profile Image */
+  .profile-image {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Decorative Elements */
+  .decorative-element {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    pointer-events: none;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Floating Animation Classes */
+  .waiting-list-section {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .waiting-list-section h2 {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  
+  .waiting-list-section .subtitle-1,
+  .waiting-list-section .subtitle-2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .waiting-list-section .signup-button {
+    margin-top: 32px;
+    padding: 16px 32px;
+    background-color: #EA580C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .signup-button:hover{
+    background-color: #FFFFFF;
+    color: #EA580C;
+  }
+
+
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .waiting-list-section h2 {
+      font-size: 36px;
+    }
+  
+    .waiting-list-section .subtitle-1,
+    .waiting-list-section .subtitle-2 {
+      font-size: 16px;
+    }
+  
+    .waiting-list-section .signup-button {
+      padding: 14px 28px;
+      font-size: 16px;
+    }
+  }
+
+  /* Add these styles to your existing CSS */
+
+.iframe-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .iframe-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-button:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Make sure iframe is responsive */
+  @media (max-width: 768px) {
+    .iframe-container {
+      width: 95%;
+      margin: 20px;
+    }
+    
+    .close-button {
+      top: -30px;
+      right: -10px;
+    }
+  }

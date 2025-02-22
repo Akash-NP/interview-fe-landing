@@ -1,0 +1,704 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Layout */
+.landing-container {
+  height: 100vh;
+}
+
+/* Thin Scrollbar for Chrome, Safari, Edge */
+.content-area::-webkit-scrollbar {
+  width: 4px; /* Make scrollbar very thin */
+}
+
+.content-area::-webkit-scrollbar-track {
+  background: transparent; /* Hide track */
+}
+
+.content-area::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* Light white scrollbar */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.content-area::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8); /* Slightly darker on hover */
+}
+
+/* Hide scrollbar for Firefox */
+.content-area {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+
+/* Header Styles */
+.header-hero-container {
+  background: radial-gradient(
+    circle at center,
+    #2A7AB6, /* Center color */
+    #1A4768, /* Middle color */
+    #0b1c27  /* Outer color */
+  );
+  color: white;
+  position: relative;
+}
+
+.header {
+  background-color: transparent; /* Make header background transparent */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.hero-section {
+  padding-top: 80px; /* Adjust padding to account for the header */
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneline{
+  display: flex;
+  padding: 10px;
+}
+
+.head {
+  display: flex;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  mix-blend-mode: multiply;
+}
+
+
+
+.nav-menu {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  gap: 30px;
+ margin-right: 50px;
+}
+
+.nav-link {
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: #7cb9e8;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.signin-btn {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius:25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #e67300;
+}
+
+/* Content Area */
+.content-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  /* Enables scrolling */
+  scrollbar-width: none;
+  /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none;
+  /* Hides scrollbar in IE and Edge */
+}
+
+/* Hides scrollbar for Chrome, Safari, and Edge */
+.content-area::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Hero Section */
+/*  */
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Fix Hero Heading */
+.hero-heading {
+  font-size: 50px;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.5;
+  /* Adjusted line-height */
+  margin-bottom: 10px;
+  /* Reduce space between headings */
+ 
+}
+
+.desscription {
+  padding-top: 20px;
+}
+
+.hero-desc {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #F07B08;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: #e67300;
+  transform: translateY(-2px);
+}
+
+
+/* Fix Image Container */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* ✅ Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-heading {
+    font-size: 32px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+    width: 80%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Stats Section */
+.stats-section {
+  background: radial-gradient(
+    circle at center,
+    #2A7AB6, /* Start color */
+    #1A4768, /* Middle color */
+    #0d2231 50% /* End color at 50% */
+  ), white; /* White for the remaining 50% */
+  background-position: top; /* Align the gradient at the top */
+  background-size: 100% 50%; /* Gradient covers 50% of the height */
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+  background-color: #F28C28;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Remove the margin-top that was pushing it down */
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.how-it-works {
+  padding: 0px 32px;
+  background: linear-gradient(to bottom, #ffffff 30%, #F1F5F9 30%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+}
+
+.how-it-works-2 {
+  padding: 0px 32px;
+  background: #F1F5F9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+}
+
+.how-it-works-3 {
+  padding: 0px 32px;
+  background: #F1F5F9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.section-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #1e3a5f;
+  text-align: center;
+  margin-bottom: 14px;
+  position: relative;
+  text-decoration: none;
+}
+
+.section-title::after {
+  display: block;
+  width: 200px;
+  height: 4px;
+  background-color: #1e3a5f;
+  margin: 8px auto 0;
+}
+
+/* Centering the image */
+.how-it-works img {
+  padding-top: 20px;
+  margin-bottom: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust the feature row for alignment */
+.feature-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  gap: 100px;
+  background-color: #F1F5F9;
+}
+
+
+@media screen and (max-width: 767px) {
+  .feature-image {
+    display: none; /* Hides all feature images on mobile */
+  }
+  
+  /* Adjust spacing and layout for mobile without images */
+  .feature-row {
+    gap: 32px; /* Reduce gap since there's no image */
+  }
+  
+  .how-it-works, .how-it-works-2, .how-it-works-3 {
+    height: auto; /* Allow height to adjust based on content */
+    padding: 32px 16px; /* Adjust padding for mobile */
+  }
+  
+  .feature-text, .feature-text-2, .feature-text-3 {
+    padding-bottom: 16px; /* Reduce padding on mobile */
+    max-width: 100%; /* Allow text to use full width */
+  }
+  
+  .feature-heading {
+    font-size: 32px; /* Smaller heading size for mobile */
+  }
+  
+  .section-title {
+    font-size: 36px; /* Smaller title size for mobile */
+  }
+}
+
+/* Preserve desktop layout */
+@media screen and (min-width: 768px) {
+  .feature-image {
+    display: block; /* Show images on desktop */
+  }
+  
+  .feature-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+  }
+}
+
+.feature-text {
+  text-align: left;
+  max-width: 600px;
+  padding-bottom: 30px;
+}
+
+.feature-text-2 {
+  text-align: left;
+  max-width: 600px;
+  padding-bottom: 100px;
+}
+
+.feature-text-3 {
+  text-align: left;
+  max-width: 600px;
+  padding-bottom: 70px;
+}
+
+.feature-heading {
+  font-size: 46px;
+  font-weight: bold;
+  font-family: "Poppins", serif;
+  color: #ff7f00;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.feature-desc {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0F172A;
+  line-height: 1.6;
+}
+
+.feature-image {
+  flex: 1;
+}
+
+.feature-image img {
+  max-width: 100%;
+}
+
+/* Features Grid Section */
+.features-section {
+  padding: 64px 32px;
+  background-color: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  background-color: #f5f7fa;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #e1ebf8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.icon-circle svg {
+  width: 24px;
+  height: 24px;
+  color: #1e3a5f;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background-color: #0d2438;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Logo */
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Links */
+.footer-links-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+/* Accessibility Badge */
+.beta-badge {
+  background: #ff4081;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ff4081;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    margin-top: 40px;
+  }
+}
+
+
+/* For mobile navigation */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 64px 32px;
+  background-color: #ffffff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 64px 32px;
+  background-color: #ffffff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 10px 32px;
+  background-color: #F1F5F9;
+  }
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Only one column */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.faq-item {
+  background-color: #FFFFFF;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1e3a5f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.accordion-icon {
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 40px;
+}
+
+.faq-answer {
+  color: #666;
+  line-height: 1.6;
+  margin-top: 8px;
+  text-align: justify;
+  padding-right: 40px;
+}
