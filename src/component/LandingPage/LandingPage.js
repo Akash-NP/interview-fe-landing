@@ -192,9 +192,7 @@ These structured learning paths have helped candidates successfully interview at
         <section id="home" className="hero-section">
           <div className="hero-content">
             <div className="hero-text">
-              <h1 className="hero-heading">Never Face PM Interviews </h1>
-              <h1 className="hero-heading"> Unprepared Again
-              </h1>
+              <h1 className="hero-heading">Never Face PM Interviews <br/> Unprepared Again </h1>
               <div className="desscription">
                 <p className="hero-desc">
                 Turn Interview Anxiety into Confidence{" "}
@@ -263,8 +261,8 @@ These structured learning paths have helped candidates successfully interview at
                   </li>
                   <li>
                     Stuck at 2 AM before an interview?{" "}
-                    <strong>Practice unlimited</strong>
-                    times
+                    <strong>Practice unlimited times</strong>
+                    
                   </li>
                   <li>
                     Need quick feedback?{" "}
@@ -274,9 +272,9 @@ These structured learning paths have helped candidates successfully interview at
                     Want company-specific practice?{" "}
                     <strong>
                       Just paste the job description of the company - Amazon
-                      LP, Uber PM, Microsoft
+                      LP, Uber PM, Microsoft PM
                     </strong>
-                    PM
+                    
                   </li>
                 </ul>
               </p>
@@ -310,25 +308,25 @@ These structured learning paths have helped candidates successfully interview at
               <p className="feature-desc">
                 <ul>
                   <li>
-                    Overwhelmed with company research?
+                    Overwhelmed with company research ?
                     <strong>
                       {" "}
                       Get curated insights about company, products,
-                      leadership, culture and salary range.
+                      leadership, culture and salary range
                     </strong>
                   </li>
                   <li>
-                    Lost in product analysis?{" "}
+                    Lost in product analysis ?{" "}
                     <strong>Access structured product breakdowns</strong>{" "}
                   </li>
 
                   <li>
-                    Need interview patterns?{" "}
+                    Need interview patterns ?{" "}
                     <strong> See recent interview questions</strong>
                   </li>
 
                   <li>
-                    Want insider tips?{" "}
+                    Want insider tips ?{" "}
                     <strong>Get company-specific strategies</strong>
                   </li>
                 </ul>
@@ -347,7 +345,7 @@ These structured learning paths have helped candidates successfully interview at
               <p className="feature-desc">
                 <ul>
                   <li>
-                    Not sure if AI is accurate and Need urgent help?{" "}
+                    Not sure if AI is accurate and Need urgent help ?{" "}
                     <strong>
                       {" "}
                       Connect with mentors within 3 hours (IST time zone)
@@ -355,12 +353,12 @@ These structured learning paths have helped candidates successfully interview at
                   </li>
 
                   <li>
-                    Confused about approach?{" "}
+                    Confused about approach ?{" "}
                     <strong> Get personalized feedback</strong>
                   </li>
 
                   <li>
-                    Want expert validation?{" "}
+                    Want expert validation ?{" "}
                     <strong>
                       Talk directly with senior PMs at Amazon, Google, Zomato,
                       and top tech companies
@@ -368,7 +366,7 @@ These structured learning paths have helped candidates successfully interview at
                   </li>
 
                   <li>
-                    Need level-specific guidance?{" "}
+                    Need level-specific guidance ?{" "}
                     <strong>Match with relevant mentors</strong>
                   </li>
                 </ul>
