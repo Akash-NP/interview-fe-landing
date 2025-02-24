@@ -12,8 +12,18 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import WaitingListSection from "./WaitingList";
 
+
 const LandingPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [showIframe, setShowIframe] = useState(false);
+
+  const handleSignUpClick = () => {
+    setShowIframe(true);
+  };
+
+  const handleClose = () => {
+    setShowIframe(false);
+  };
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -196,7 +206,7 @@ These structured learning paths have helped candidates successfully interview at
               <div className="desscription">
                 <p className="hero-desc">
                 Turn Interview Anxiety into Confidence{" "}
-                  <ul>
+                  <ul style={{ fontSize: 14 }}>
                     <li>Tired of unstructured preparation?</li>
                     <li>Struggling to find the right mentors?</li>
                     <li>Need company-specific guidance?</li>
@@ -207,7 +217,7 @@ These structured learning paths have helped candidates successfully interview at
                 </p>
 
                 <p className="hero-desc">We’ve got you covered!
-                  <ul>
+                  <ul style={{ fontSize: 14 }}>
                     <li>AI Mock Interviews + Instant Mentor Access + Company-Specific Prep
                     <br/>All in One Platform</li>
                   </ul>
@@ -215,6 +225,42 @@ These structured learning paths have helped candidates successfully interview at
                   Trusted by PMs who cracked interviews at Amazon, Uber, Microsoft, and more
 
                 </p>
+              </div>
+
+              <div >
+              <div style={{ paddingBottom: 50 }} >           
+              <button className="cta-button" onClick={handleSignUpClick}>
+              Join the Waitlist
+              </button>
+            </div>
+      
+            {showIframe && (
+              <div className="iframe-overlay">
+                <div className="iframe-container">
+                  <button className="close-button" onClick={handleClose}>×</button>
+                  <iframe
+                    src="https://share.synamate.com/widget/form/PzpVc391cMxwteQOQ36n"
+                    style={{ width: "100%", height: "556px", border: "none", borderRadius: "3px" }}
+                    id="popup-PzpVc391cMxwteQOQ36n"
+                    data-layout='{"id":"POPUP"}'
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="IPU Sign up Form"
+                    data-height="556"
+                    data-layout-iframe-id="popup-PzpVc391cMxwteQOQ36n"
+                    data-form-id="PzpVc391cMxwteQOQ36n"
+                    title="IPU Sign up Form"
+                  />
+                </div>
+              </div>
+            )}
+      
+            {/* Keep the script directly in the JSX, so it loads properly */}
+            <script src="https://share.synamate.com/js/form_embed.js"></script>
               </div>
             </div>
             <div className="hero-image">
@@ -436,8 +482,6 @@ These structured learning paths have helped candidates successfully interview at
             </div>
           </div>
         </section>
-
-        <WaitingListSection />
 
         {/* Footer */}
 
